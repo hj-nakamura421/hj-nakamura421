@@ -1,5 +1,7 @@
 <h1 align="center">HJ Nakamura</h1>
 
+<!-- Public engineering portfolio profile -->
+
 <p align="center">
   <strong>Mechanical Engineering at Imperial College London</strong><br>
   Building transparent software for energy infrastructure, engineering data and decision support.
