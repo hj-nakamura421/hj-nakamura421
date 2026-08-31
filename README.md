@@ -17,9 +17,8 @@
 
 ## What I build
 
-I am interested in the point where physical systems, imperfect data and engineering decisions meet. My projects turn public infrastructure records and vehicle telemetry into tools that can be inspected, tested and used—not just notebooks that produce a number.
+I am interested in the point where physical systems, imperfect data and engineering decisions meet. My projects turn public infrastructure records and vehicle telemetry into tools that can be inspected, tested and used.
 
-My default is to establish a transparent baseline, validate it on genuinely later data, and add complexity only when it improves reliability.
 
 ## Featured system: UK Renewable Infrastructure Intelligence
 
