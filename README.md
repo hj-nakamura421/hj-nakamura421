@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hj-nakamura421/imperial-fs-telemetry"><strong>Formula Student telemetry</strong></a>
+  <a href="https://imperial-fs-telemetry.streamlit.app/"><strong>Live Formula Student debrief</strong></a>
   ·
   <a href="https://uk-renewable-intelligence.github.io/">Live energy platform</a>
   ·
@@ -21,7 +21,7 @@ I am interested in vehicle performance, mechanical design, simulation, systems, 
 
 ## Featured vehicle project: Formula Student EV telemetry debrief
 
-[Formula Student EV Drivetrain Telemetry Debrief](https://github.com/hj-nakamura421/imperial-fs-telemetry) is a portfolio prototype for reviewing EV test data.
+[Formula Student EV Drivetrain Telemetry Debrief](https://imperial-fs-telemetry.streamlit.app/) is a deployed portfolio prototype for reviewing EV test data. Its [analysis and interface source](https://github.com/hj-nakamura421/imperial-fs-telemetry) is public and tested.
 
 What I engineered:
 
