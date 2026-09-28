@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://imperial-fs-telemetry.streamlit.app/"><strong>Live Formula Student debrief</strong></a>
+  <a href="https://imperial-fs-telemetry.streamlit.app/"><strong>Formula Student debrief · synthetic demo</strong></a>
   ·
   <a href="https://uk-renewable-intelligence.github.io/">Live energy platform</a>
   ·
@@ -19,21 +19,24 @@
 
 I am interested in vehicle performance, mechanical design, simulation, systems, test and development. I use code as an engineering tool: to turn imperfect data into decisions, expose assumptions, automate repetitive analysis and communicate results clearly.
 
-## Featured vehicle project: Formula Student EV telemetry debrief
+## Featured vehicle project: Formula Student EV Test-Data Debrief
 
-[Formula Student EV Drivetrain Telemetry Debrief](https://imperial-fs-telemetry.streamlit.app/) is a deployed portfolio prototype for reviewing EV test data. Its [analysis and interface source](https://github.com/hj-nakamura421/imperial-fs-telemetry) is public and tested.
+[Formula Student EV Test-Data Debrief](https://imperial-fs-telemetry.streamlit.app/) is my independent engineering portfolio prototype for turning EV drivetrain telemetry into a structured post-run review. The public demonstration uses synthetic data; **it is not an official Imperial Formula Student tool or team dataset, and has not been deployed by the team.**
+
+**Physical engineering → test data → calculations → engineering judgement → next action.** Each review window connects a signal breach to a specific next investigation, such as checking cooling performance, current demand or pack state of charge.
 
 What I engineered:
 
-- validate signal schemas, numeric quality, timestamps and lap numbering before analysis;
-- group consecutive motor-temperature, inverter-temperature and pack-voltage breaches into reviewable events;
-- integrate timestamped mechanical and electrical power instead of assuming a fixed logger rate;
-- compare lap-level power, temperatures, pack voltage, energy and estimated drivetrain efficiency;
-- expose engineering limits and nominal pack voltage as adjustable inputs;
-- separate the calculation layer from the interface and verify it with `pytest` and GitHub Actions.
+- telemetry validation for signal schemas, numeric quality, timestamps and lap numbering;
+- event detection that groups motor-temperature, inverter-temperature and pack-voltage breaches into review windows;
+- timestamp-aware mechanical and electrical energy integration, with lap-level comparisons;
+- a deterministic synthetic generator linking torque, RPM, power, assumed efficiency and a baseline pack-resistance model, with injected review scenarios;
+- a Streamlit and Plotly interface with adjustable demonstration thresholds and an exportable review log;
+- a separate calculation layer verified with `pytest` and GitHub Actions.
 
-The committed session is explicitly synthetic. It demonstrates the workflow without claiming access to or deployment on private team data.
+The default temperatures and voltages are illustrative review values, not Imperial Racing Green hardware limits. Priority labels use a documented demonstration heuristic. Real-telemetry validation and hardware-specific thresholds remain future work.
 
+**Review the work:** [screenshot and engineering case study](https://github.com/hj-nakamura421/imperial-fs-telemetry#readme) · [analysis source](https://github.com/hj-nakamura421/imperial-fs-telemetry/blob/main/telemetry.py) · [tests](https://github.com/hj-nakamura421/imperial-fs-telemetry/blob/main/tests/test_telemetry.py)
 
 ## Featured system: UK Renewable Infrastructure Intelligence
 
@@ -62,7 +65,7 @@ What I engineered:
 
 | Project | What it demonstrates | Stack |
 |---|---|---|
-| [Formula Student telemetry](https://github.com/hj-nakamura421/imperial-fs-telemetry) | Drivetrain test analysis, thermal and accumulator event triage, timestamp-aware energy integration and lap summaries | Python, pandas, NumPy, Plotly, Streamlit, pytest |
+| [Formula Student EV Test-Data Debrief](https://github.com/hj-nakamura421/imperial-fs-telemetry) | Independent prototype with synthetic data: thermal and voltage event review, timestamp-aware energy integration and lap summaries | Python, pandas, NumPy, Plotly, Streamlit, pytest |
 | [Renewable Intelligence platform](https://github.com/uk-renewable-intelligence/uk-renewable-intelligence.github.io) | Product design, interactive mapping, project screening and decision-focused visualisation | JavaScript, Leaflet, GitHub Pages |
 | [Forecasting and data pipeline](https://github.com/hj-nakamura421/uk-renewable-energy-dashboard) | Entity resolution, survival modelling, temporal validation, scenario analysis and reproducibility | Python, pandas, scikit-learn, CatBoost, Streamlit |
 
